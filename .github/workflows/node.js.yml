@@ -24,7 +24,6 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: yarn
-    - run: yarn run build
-    - run: yarn run deploy
-      
+    - name: GitHub Push
+      uses: ad-m/github-push-action@v0.6.0
+
